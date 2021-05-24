@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7va-ga-BWo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="OCW-AJ-oc3">
+            <objects>
+                <viewController id="RUw-Wh-0ZQ" customClass="JumpViewController" customModule="Random_Trick_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kei-ET-bNb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XHc-WE-wUc" userLabel="Main VStack">
+                                <rect key="frame" x="40" y="144" width="334" height="469"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-60" translatesAutoresizingMaskIntoConstraints="NO" id="OHM-JI-DAD" userLabel="Label VStack">
+                                        <rect key="frame" x="123" y="0.0" width="88" height="117.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Temp Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdU-Q9-CSs" userLabel="FrontSide/BackSide">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="157"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDs-se-SaD" userLabel="TrickName">
+                                                <rect key="frame" x="23.5" y="97" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dD-aW-1QL" userLabel="New Trick Button">
+                                        <rect key="frame" x="133" y="117.5" width="68" height="117"/>
+                                        <state key="normal" title="New Trick"/>
+                                        <connections>
+                                            <action selector="newTrickButtonWasTapped:" destination="NC2-wk-sJn" eventType="touchUpInside" id="o2I-4C-8j5"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jF9-9e-4wu">
+                                        <rect key="frame" x="-2" y="234.5" width="338" height="118.5"/>
+                                        <connections>
+                                            <action selector="difficultySliderChanged:" destination="NC2-wk-sJn" eventType="valueChanged" id="4W8-5p-vRr"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26O-qm-Igb" userLabel="Difficulty">
+                                        <rect key="frame" x="146.5" y="352" width="41.5" height="117"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7dU-r0-Mun"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="XHc-WE-wUc" firstAttribute="leading" secondItem="7dU-r0-Mun" secondAttribute="leading" constant="40" id="576-ym-KDK"/>
+                            <constraint firstItem="7dU-r0-Mun" firstAttribute="trailing" secondItem="XHc-WE-wUc" secondAttribute="trailing" constant="40" id="5Ug-na-844"/>
+                            <constraint firstItem="XHc-WE-wUc" firstAttribute="top" secondItem="7dU-r0-Mun" secondAttribute="top" constant="100" id="GRR-XV-NR2"/>
+                            <constraint firstItem="7dU-r0-Mun" firstAttribute="bottom" secondItem="XHc-WE-wUc" secondAttribute="bottom" constant="200" id="N4B-U0-DHq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="oN5-We-L0d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lt1-17-ueQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="159"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="9Vj-xC-gge">
+            <objects>
+                <viewController id="NC2-wk-sJn" customClass="RailViewController" customModule="Random_Trick_Generator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y2W-gh-dgm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-QP-GK3" userLabel="Main VStack">
+                                <rect key="frame" x="40" y="144" width="334" height="469"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-60" translatesAutoresizingMaskIntoConstraints="NO" id="6c5-50-C45" userLabel="Label VStack">
+                                        <rect key="frame" x="123" y="0.0" width="88" height="117.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Temp Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdX-cI-Fsz" userLabel="FrontSide/BackSide">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="157"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-G1-qkk" userLabel="TrickName">
+                                                <rect key="frame" x="23.5" y="97" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzM-Mx-dyp" userLabel="New Trick Button">
+                                        <rect key="frame" x="123" y="117.5" width="88" height="117"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="New Trick"/>
+                                        <connections>
+                                            <action selector="newTrickButtonWasTapped:" destination="NC2-wk-sJn" eventType="touchUpInside" id="gdY-pM-kxH"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fPJ-Cs-l7m">
+                                        <rect key="frame" x="-2" y="234.5" width="338" height="118.5"/>
+                                        <connections>
+                                            <action selector="difficultySliderChanged:" destination="NC2-wk-sJn" eventType="valueChanged" id="nqv-4u-PFs"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-oG-Ghu" userLabel="Difficulty">
+                                        <rect key="frame" x="146.5" y="352" width="41.5" height="117"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IWq-cu-kNF"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="IWq-cu-kNF" firstAttribute="trailing" secondItem="fNl-QP-GK3" secondAttribute="trailing" constant="40" id="8CJ-NR-icH"/>
+                            <constraint firstItem="fNl-QP-GK3" firstAttribute="top" secondItem="IWq-cu-kNF" secondAttribute="top" constant="100" id="OCS-Bc-w2f"/>
+                            <constraint firstItem="IWq-cu-kNF" firstAttribute="bottom" secondItem="fNl-QP-GK3" secondAttribute="bottom" constant="200" id="gD3-jT-c2l"/>
+                            <constraint firstItem="fNl-QP-GK3" firstAttribute="leading" secondItem="IWq-cu-kNF" secondAttribute="leading" constant="40" id="kkI-30-nJX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="eDJ-zo-FhV"/>
+                    <connections>
+                        <outlet property="difficultyLabel" destination="vbx-oG-Ghu" id="E62-h9-H9j"/>
+                        <outlet property="difficultySlider" destination="fPJ-Cs-l7m" id="1MU-wL-mXl"/>
+                        <outlet property="fsbsLabel" destination="fdX-cI-Fsz" id="tGO-7M-5PV"/>
+                        <outlet property="newTrickButton" destination="GzM-Mx-dyp" id="Jbv-e2-sG3"/>
+                        <outlet property="trickNameLabel" destination="DWx-G1-qkk" id="zqR-k7-yPY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHK-75-z82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.91304347826087" y="-447.32142857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Cuz-Mc-pZk">
+            <objects>
+                <tabBarController id="7va-ga-BWo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ivd-Nf-3Xc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NC2-wk-sJn" kind="relationship" relationship="viewControllers" id="d6V-h9-iTF"/>
+                        <segue destination="RUw-Wh-0ZQ" kind="relationship" relationship="viewControllers" id="BOg-yQ-I73"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9CB-g0-ef8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-316" y="-144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
